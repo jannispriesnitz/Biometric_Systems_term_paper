@@ -353,28 +353,32 @@
 %
 % paper title
 % can use linebreaks \\ within to get better formatting as desired
-\title{Bare Demo of IEEEtran.cls for Conferences}
+\title{Capabilities of automatic and manual face morphing}
 
 
 % author names and affiliations
 % use a multiple column layout for up to three different
 % affiliations
-\author{\IEEEauthorblockN{Michael Shell}
-\IEEEauthorblockA{School of Electrical and\\Computer Engineering\\
-Georgia Institute of Technology\\
-Atlanta, Georgia 30332--0250\\
-Email: http://www.michaelshell.org/contact.html}
-\and
-\IEEEauthorblockN{Homer Simpson}
-\IEEEauthorblockA{Twentieth Century Fox\\
-Springfield, USA\\
-Email: homer@thesimpsons.com}
-\and
-\IEEEauthorblockN{James Kirk\\ and Montgomery Scott}
-\IEEEauthorblockA{Starfleet Academy\\
-San Francisco, California 96678-2391\\
-Telephone: (800) 555--1212\\
-Fax: (888) 555--1212}}
+
+\author{\IEEEauthorblockN{Jannis Priesnitz}
+	\IEEEauthorblockA{University of Applied Sciences Darmstadt\\
+		Department of Computer Science\\
+		Schöfferstraße 3\\
+		64295 Darmstadt\\
+		Email: jannis.priesnitz@stud.h-da.de}
+	
+}
+%\and
+%\IEEEauthorblockN{Homer Simpson}
+%\IEEEauthorblockA{Twentieth Century Fox\\
+%Springfield, USA\\
+%Email: homer@thesimpsons.com}
+%\and
+%\IEEEauthorblockN{James Kirk\\ and Montgomery Scott}
+%\IEEEauthorblockA{Starfleet Academy\\
+%San Francisco, California 96678-2391\\
+%Telephone: (800) 555--1212\\
+%Fax: (888) 555--1212}}
 
 % conference papers do not typically use \thanks and this command
 % is locked out in conference mode. If really needed, such as for
@@ -413,7 +417,7 @@ Fax: (888) 555--1212}}
 
 \begin{abstract}
 %\boldmath
-\blindtext[1]
+%\blindtext[1]
 \end{abstract}
 % IEEEtran.cls defaults to using nonbold math in the Abstract.
 % This preserves the distinction between vectors and scalars. However,
@@ -424,7 +428,7 @@ Fax: (888) 555--1212}}
 
 % Note that keywords are not normally used for peerreview papers.
 \begin{IEEEkeywords}
-IEEEtran, journal, \LaTeX, paper, template.
+Face morphing, face detection, automatic border controls.
 \end{IEEEkeywords}
 
 
@@ -444,11 +448,18 @@ IEEEtran, journal, \LaTeX, paper, template.
 
 
 
-\section{Introduction}
-\blindtext
+%\section{Introduction}
+%\blindtext
 
-\subsection{Subsection Heading Here}
-\blindtext
+%\subsection{Subsection Heading Here}
+%\blindtext
+\input{Introduction}
+\input{Fundamentals}
+\input{Conception}
+\input{Detection_Algorithm}
+\input{Results}
+\input{Conclusion}
+\input{Further_topics}
 
 % needed in second column of first page if using \IEEEpubid
 %\IEEEpubidadjcol
@@ -537,8 +548,8 @@ IEEEtran, journal, \LaTeX, paper, template.
 
 
 
-\section{Conclusion}
-\blindtext
+%\section{Conclusion}
+%\blindtext
 
 
 
@@ -559,15 +570,15 @@ IEEEtran, journal, \LaTeX, paper, template.
 %
 
 
-\appendices
-\section{Proof of the First Zonklar Equation}
-\blindtext
+%\appendices
+%\section{Proof of the First Zonklar Equation}
+%\blindtext
 
 % use section* for acknowledgement
-\section*{Acknowledgment}
+%\section*{Acknowledgment}
 
 
-The authors would like to thank...
+%The authors would like to thank...
 
 
 % Can use something like this to put references on a page
@@ -600,13 +611,14 @@ The authors would like to thank...
 % <OR> manually copy in the resultant .bbl file
 % set second argument of \begin to the number of references
 % (used to reserve space for the reference number labels box)
-\begin{thebibliography}{1}
+%\begin{thebibliography}{1}
 
-\bibitem{IEEEhowto:kopka}
-H.~Kopka and P.~W. Daly, \emph{A Guide to \LaTeX}, 3rd~ed.\hskip 1em plus
-  0.5em minus 0.4em\relax Harlow, England: Addison-Wesley, 1999.
+%\bibitem{IEEEhowto:kopka}
+%H.~Kopka and P.~W. Daly, \emph{A Guide to \LaTeX}, 3rd~ed.\hskip 1em plus
+%  0.5em minus 0.4em\relax Harlow, England: Addison-Wesley, 1999.
 
-\end{thebibliography}
+%\end{thebibliography}
+\bibliography{Quellen} 
 
 % biography section
 % 
