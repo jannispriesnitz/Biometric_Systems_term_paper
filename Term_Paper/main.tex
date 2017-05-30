@@ -253,6 +253,12 @@
 
 
 % *** SUBFIGURE PACKAGES ***
+
+\ifCLASSOPTIONcompsoc
+\usepackage[caption=false, font=normalsize, labelfont=sf, textfont=sf]{subfig}
+\else
+\usepackage[caption=false, font=footnotesize]{subfig}
+\fi
 %\usepackage[tight,footnotesize]{subfigure}
 % subfigure.sty was written by Steven Douglas Cochran. This package makes it
 % easy to put subfigures in your figures. e.g., "Figure 1a and 1b". For IEEE
@@ -265,7 +271,7 @@
 
 
 
-%\usepackage[caption=false]{caption}
+%\usepackage{caption} % removed obsolete [caption=false]
 %\usepackage[font=footnotesize]{subfig}
 % subfig.sty, also written by Steven Douglas Cochran, is the modern
 % replacement for subfigure.sty. However, subfig.sty requires and
