@@ -1,23 +1,25 @@
 \section{Database and selection of test subjects}
-DB given samples given
+As test sample a data set of XXX\todo{how many?} ICAO compliant pictures were given. In order to get promising morph results XX \todo{number} pairs of photos were selected for manual morphing \ref{manual_morph} where as the automatic morphing algorithm \ref{automatic_morph} was applied on all data sets. 
+In summation XX manual and XXX automatic morphs are issued in this paper. 
 
 
 \section{Morphing of Faces}
-Creating morphes can
+The main task during the morphing of two pictures is to detect characteristics and place landmarks as an advince for the algorithm. This can be done completely automatic or with support of an user. In this paper both way are discussed.  
 \subsection{Automatic morphing}
-
+\label{automatic_morph}
 \subsubsection{Results}
 
 \subsection*{Manual morphing}
+\label{manual_morph}
 In contrast to the automatic face morphing approach, manual morphing is discussed in this section. 
 
 To achieve morphes, the open source software GNU Image Manipulation Software (GIMP) (Version 2.8.16)with the GIMP Animation Package (GAP) (Version 2.6) was selected for this paper. Morphing with GAP follows the simple approach of manually placing connected landmarks at characterizing points in both faces. The algorithm shifts the landmarks from face one to face two. In addition to this the color of the skin is transmitted. 
 
-\subsubsection*{Morphing setup}
+%\subsubsection*{Morphing setup}
 For the test samples 100 - 125 landmarks were placed, depending on the face characteristics. The output contains a sequence of 30 photos which show different stages of the morphing procedure. A manual post production of the morphed was not necessary. 
 
 \subsubsection*{Results}
-
+\todo{compare to automatic results when there.}
 \begin{figure} 
 	\centering
 	\subfloat[Subject 1]{%
