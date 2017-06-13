@@ -1,24 +1,10 @@
+% !TeX root = main.tex
 \section{Results}
-Resulting from the work are the squared l2 distances calculated with the program openface. The distance shows the similiarity to the given subjects. A lower distance means the compared two persons are more equal, when the distance is under a given threshold, these two persons are accepted to be the same person and so access is given. The resulting morphed photos were compared to diffrent photos of both subjects, to get a independend distance. For every morph there were 15 images created from 0\% of Subject 1 to 100\%, respectively the remaining \% of Person 2. So the are images combined of:
-\begin{itemize}
-\item 1. Picture: Person 1 100\% - Person 2 0\%
-\item 2. Picture: Person 1 92,86\% - Person 2 7,14\%
-\item 3. Picture: Person 1 85,71\% - Person 2 14,29\%
-\item 4. Picture: Person 1 78,57\% - Person 2 21,43\%
-\item 5. Picture: Person 1 71,43\% - Person 2 28,57\%
-\item 6. Picture: Person 1 64,29\% - Person 2 35,71\%
-\item 7. Picture: Person 1 57,14\% - Person 2 42,86\%
-\item 8. Picture: Person 1 50,00\% - Person 2 50,00\%
-\item 9. Picture: Person 1 42,86\% - Person 2 57,14\%
-\item 10. Picture: Person 1 35,71\% - Person 2 64,29\%
-\item 11. Picture: Person 1 28,57\% - Person 2 71,43\%
-\item 12. Picture: Person 1 21,43\% - Person 2 78,57\%
-\item 13. Picture: Person 1 14,29\% - Person 2 85,71\%
-\item 14. Picture: Person 1 7,14\% - Person 2 92,86\%
-\item 15. Picture: Person 1 0\% - Person 2 100\%
-\end{itemize}
-
+Resulting from the work are the squared l2\todo{rename} distances calculated with the program openface. The distance shows the similiarity to the given subjects. A lower distance means the compared two persons are more equal, when the distance is under a given threshold, these two persons are accepted to be the same person and so access is given. The resulting morphed photos were compared to diffrent photos of both subjects, to get a independend distance. \ref{percentageMorph}
 \subsection{Distances}
+
+\todo[inline]{manual machen und von automatisch abgrenzen}
+
 \subsubsection{Subset of 5 morph sets (from subjects also used by Budrhani)}
 All resulting squared l2 distances for the morphed photos of subjects 01-m-002-27 to 01-m-003-24, 01-m-003-24 to 01-m-005-23, 01-m-004-23 to 01-m-005-23, 01-m-010-23 to 01-m-013-23 and 01-m-014-23 to 01-m-016-23 compared to the corresponding compare images are way too many data. So there is as an example the morphed photo 01-m-002-27 to 01-m-003-24:
 
@@ -121,7 +107,7 @@ Now 39 sets of morphed subjects were used. The used subjects are:
 \end{multicols}
 
 
-With these sets again the squarred l2 distance is computed to the associated compare images of the two subjects. The resulting distances are shown in figure \ref{fig:Result39-all}. To decrease the amount of information the mean values for both subjects were computed and are shown in figure \ref{fig:Result39-mean}.
+With these sets again the squared l2 distance is computed to the associated compare images of the two subjects. The resulting distances are shown in figure \ref{fig:Result39-all}. To decrease the amount of information the mean values for both subjects were computed and are shown in figure \ref{fig:Result39-mean}.
 \begin{figure}[htbp] 
 	\centering
 		\includegraphics[width=0.95\textwidth]{Resources/result39-all.jpg}
@@ -136,13 +122,15 @@ With these sets again the squarred l2 distance is computed to the associated com
 \end{figure}
 \newpage
 \subsection{Threshold}
-As a result a threshold is computed to get a 10\% false accept and a 90\% chance to right decline a morphed image.\todo{richtige Bezeichnungen raussuchen}Used for the calculation is the subset and its distances of section \ref{sec:subset39}.
-The resulting threshold for this subset is \textbf{0,78666402}. In contrast to the distances it is shown in figure \ref{fig:Result39-90-10}.
+As a result a threshold is computed to get a 10\% false accept and a 90\% chance to right decline a morphed image.\todo{richtige Bezeichnungen raussuchen} Used for the calculation is the subset and its distances of section \ref{sec:subset39}.
+The resulting threshold for this subset is \textbf{$0.78666402$}. In contrast to the distances it is shown in figure \ref{fig:Result39-90-10}.
 
 
 \begin{figure}[htbp] 
 	\centering
 		\includegraphics[width=0.95\textwidth]{Resources/result39-90-10.jpg}
-	\caption{Squared l2 distances (y axis) of the subset of 39 morphs (with 15 steps on the x axis) compared to the corresponding compare photos, in contrast to the calculated threshold of 0,78666402} \todo{beschreibung anpassen}
+	\caption{Squared l2 distances (y axis) of the subset of 39 morphs (with 15 steps on the x axis) compared to the corresponding compare photos, in contrast to the calculated threshold of $0.78666402$} %\todo{beschreibung anpassen}
 	\label{fig:Result39-90-10}
 \end{figure}
+
+\todo[inline]{manual machen und vergleichen}
