@@ -1,8 +1,13 @@
 \section{Database and selection of test subjects}
 As test sample a data set of XXX\todo{how many?} ICAO compliant pictures were given. In order to get promising morph results, a subset of XX \todo{number} pairs of photos were selected for manual morphing \ref{manual_morph} where as the automatic morphing algorithm \ref{automatic_morph} was applied on all data sets. For manual  morphing only pairs with a visually high coincidence are considered because the aceptance rate of the comparison algorithem is expected to be higher. 
 In summation XX manual and XXX automatic morphs are issued in this paper. 
+\todo[inline]{how many men women?}
 
-\todo[inline]{ICAO conformance beschrieben}
+\subsection{ICAO compliance}
+To fulfil ICAO compliance, a picture has to meet several properties. The whole face should be shown as well as the right and left half. The face, without the hair, should cover 70 - 80 \% of the photo and should be in a centered positon without any rotations. The phote has to be sharp, clear and contrasty in all sections and should be enlightened homogeneously in all passages without reflexions. As background and single collared contrasty surface without shadows should be selected. The subject has to look into the camera directly. Especially if the subject wears glasses, reflections should be avoided and the eyes must not be covered by parts of the glasses. The pose should be neutral and the mouth has to be closed. The wearing of headpieces is omitted but can be permitted e.g. because of religious reasons or long lasting head injuries\cite{bdi2010Verordnung}. 
+
+All photos used in this work are ICAO compliant or nearly ICAO compliant, with respect to the above criteria. Some of the pictures had the wrong format (the subject was too close to camera). These photos were reformatted to meet the standard with digital post production. It can be ruled out that the post production has any effect on recognition algorithm. 
+\todo[inline]{DONE ICAO conformance beschrieben}
 \todo[inline]{FaceDB}
 
 \section{Morphing of Faces}
@@ -39,7 +44,7 @@ For every morph there were 15 images created from 0\% of Subject 1 to 100\%, res
 	\centering
 	\subfloat[Subject 1]{%
 		\includegraphics[width=0.25\linewidth]{Resources/manualmorph01.jpg}}
-	\label{subfig:manualmorph01}\hfill
+	\label{subfig:manualmorph01}\hspace{10pt}
 	\subfloat[Morph no. 5]{%
 		\includegraphics[width=0.25\linewidth]{Resources/manualmorph02.jpg}}
 	\label{subfig:manualmorph02}\\
