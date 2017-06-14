@@ -2,20 +2,22 @@
 Face recognition systems have become one of the most popular biometric authentication methods in the last years. It is based on the fairly unique biometric characteristic of a human face. One of their advantages are the property of a contactless capturing the face images with help of an arbitrary high resolution camera system which highly accepted by the data subjects. In addition to this, the capability of a visual inspection instead of an automatic process is one of the reasons why face recognition is selected as authentication method for biometric passports. 
 % due to comparing the biometric data set to the individual 
 The basic idea is simply to observe certain properties of the human face, such as the shape of the head or wrinkles and furrows, and place landmarks on characterizing points. 
+Beside the issues of the naturally aging of the face, posing, a external influences like lightning or camera properties, intentionally alterations on the picture could be done, to reduce or improve the aceptance level of the recognition system.
+\todo[inline]{DONE Hier könnte noch kurz aging und posing rein.}
 
-\todo[inline]{Hier könnte noch kurz aging und posing rein.}
+Since 2002 \cite{del2016automated} face recognition is used as identity confirmation in the electronic Machine Readable Travel Document (eMRTD) by the  International Civil Aviation Organisation (ICAO). This means every eMRTD issued by an governmental organisation contains an facial image which has to follow certain properties in order to support the machine based automatic verification \cite{bdi2010Verordnung}. \todo{DONE cite / improove}
 
-Since 2002 \todo{? cite} face recognition is used as identity confirmation in the electronic 
-Machine Readable Travel Document (eMRTD) by the  International Civil Aviation Organisation (ICAO). This means every eMRTD issued by an governmental organisation contains an facial image which has to follow certain properties in order to support the machine based automatic verification. \todo{cite / improove}
+In several countries, it is possible to provide own printed pictures to the issuing organisation. This practise leads to the possibility of processing on the photo and therefore altering the biometric data set stored in the eMRTD. A feasible attack would also be an alteration in the way that another individual, than the one which the passport is issued to, is morphed into the photo.  Of course these alterations form a potential attack vector on the Automated Border Control systems (ABC) \todo{OBSOLETE introduce earlier}. Automated border controls are automated self-service barriers which compare the  photo stored in a biometric passport to a just in time taken photo or video. This process was selected by the ICAO as standard process for automated immigration checks which mainly takes place as airports \cite{del2016automated}. 
 
-In several countries, such as \todo{... Spain?}, it is possible to provide own printed pictures to the issuing organisation. This practise leads to the possibility of processing on the photo and therefore altering the biometric data set stored in the eMRTD. Of course these alterations form a potential attack vector on the Automatic Border Control systems (ABC) \todo{introduce earlier}. A feasible attack would be an alteration in the way that another individual than the one which the passport is issued to is recognized by the ABC or both individuals are recognized as the same person. 
+Especially morphing the biometric data from two subjects into one photo is feasible alteration. If the alteration was successful, are recognized as the same person by the ABC. 
 
-To achieve this the face of the issuing individual and an attacker has to be morphed together. The goal on\todo{whitin?} this process is to provide a morphed photo to the issuing instance which visually nearly identical with the issuer but automatically accepts both, the issuer and the attacker. Having reached this both, the issuer and the attacker are able to show up at the ABC system and both will be accepted. 
+To achieve this the face of the issuing individual and an attacker has to be morphed together. The goal on\todo{in / whitin?} this process is to provide a morphed photo to the issuing instance which visually nearly identical with the issuer but automatically accepts both, the issuer and the attacker. Having reached this both are able to show up at the ABC system and both will be accepted. 
 
-\todo[inline]{What are we doing on the topic?}
-\todo{OPT: erweitern welche Ansätze von face detectoin gibt es grundsätzlich?}
+Morphing can be either done by an algorithm which is completely automatic or by manually setting the landmarks and perform the morphing automatical. In this work, we will compare both processes with respect to the acceptance rate of a face detection algorithm. 
+\todo[inline]{DONE What are we doing on the topic?}
+\todo[inline]{OPT erweitern welche Ansätze von face detectoin gibt es grundsätzlich?}
 
-\subsection*{Outline}
+\subsection{Outline}
  \todo[inline]{label + ref}
 The rest of this paper is organized as follows: In ... we provide some details on the topic of face detection followed by describing the procedure of morphing faces. ... deal with the selected detection algorithm and gives some details on our test setup. Finally in ... the result of test subjects are discussed followed by a conclusion in ... .
  
