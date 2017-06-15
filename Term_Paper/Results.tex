@@ -1,15 +1,13 @@
 % !TeX root = main.tex
 \section{Results}
-Resulting from the work are the squared l2\todo{rename} distances calculated with the program openface. The distance shows the similiarity to the given subjects. A lower distance means the compared two persons are more equal, when the distance is under a given threshold, these two persons are accepted to be the same person and so access is given. The resulting morphed photos were compared to diffrent photos of both subjects, to get a independend distance. \ref{percentageMorph}
+Resulting from the work are the squared l2 euclidean distances calculated with the program OpenFace. The distance shows the similiarity to the given subjects. A lower distance means the compared two persons are more equal, when the distance is under a given threshold, these two persons are accepted to be the same person and so access is given. The resulting morphed photos were compared to diffrent photos of both subjects, to get a independend distance. Which percentage of each person and the picture number is shown in \ref{percentageMorph}.
 \subsection{Distances}
 
-\todo[inline]{manual machen und von automatisch abgrenzen}
-
-\subsubsection{Subset of 5 morph sets (from subjects also used by Budrhani)}
-All resulting squared l2 distances for the morphed photos of subjects 01-m-002-27 to 01-m-003-24, 01-m-003-24 to 01-m-005-23, 01-m-004-23 to 01-m-005-23, 01-m-010-23 to 01-m-013-23 and 01-m-014-23 to 01-m-016-23 compared to the corresponding compare images are way too many data. So there is as an example the morphed photo 01-m-002-27 to 01-m-003-24:
+\subsubsection{Subset of 5 automatic generated morph sets (from subjects also used by Budrhani)}\label{sec:subset5}
+All resultingsquared l2 euclidean distances for the morphed photos of subjects 01-m-002-27 to 01-m-003-24, 01-m-003-24 to 01-m-005-23, 01-m-004-23 to 01-m-005-23, 01-m-010-23 to 01-m-013-23 and 01-m-014-23 to 01-m-016-23 compared to the corresponding compare images are way too much data. So there is as an example of the morphed image 01-m-002-27 - 01-m-003-24:
 
 \begin{tabular}{lrrrrrr}
-	Picture & 01-m-002-28.jpg & 01-m-002-29.jpg & 01-m-002-30.jpg & 01-m-003-25.jpg & 01-m-003-26.jpg & 01-m-003-27.jpg \\
+	Picture & 01-m-002-28 & 01-m-002-29 & 01-m-002-30 & 01-m-003-25 & 01-m-003-26 & 01-m-003-27 \\
 	 & & & & & & \\
 	1 & 0.11916 & 0.07499 & 0.19188 & 1.30874 & 1.16709 & 1.31322\\
 	2 & 0.13701 & 0.06885 & 0.18756 & 1.25716 & 1.10248 & 1.25841\\ 
@@ -28,40 +26,37 @@ All resulting squared l2 distances for the morphed photos of subjects 01-m-002-2
 	15 & 1.37122 & 1.13813 & 1.18339 & 0.14941 & 0.05522 & 0.13605\\ 
 \end{tabular}\\
 
-
 Also shown in figure \ref{fig:Result1}.
 
 The results of the 01-m-002-27 to 01-m-003-24, 01-m-003-24 to 01-m-005-23, 01-m-004-23 to 01-m-005-23, 01-m-010-23 to 01-m-013-23 and 01-m-014-23 to 01-m-016-23 morphs are shown in figure \ref{fig:Result1-5}.
 
-For better recognizability the mean value of all the diffrent squared l2 distances is calculated for Person 1 and Person 2. The result is shwon in figure \ref{fig:Result1-5-mean}.
+For better recognizability the mean value of all the diffrent squared l2 euclidean distances is calculated for subject 1 and subject 2. The result is shwon in figure \ref{fig:Result1-5-mean}. The distance graphs crosses by ($9.04$, $0.49$), so the best distance for both subjects is with picture 9 with distances of $0.48$ and $0.49$. Picture 9 with $42.86$\% of subject 1 and $57.14$\% of subject 2 so it  not the middle of all 15 pictures, this could be the cause of the different distances of the subjects to their own compare images.
 
-As visible the lowest distance to both persons is at Picture 9 (Person 1 42,86\% - Person 2 57,14\%) wtih a minimal distance of \textbf{0.485}.\\
-
-Openface uses normally a threshold of \textbf{0.99}, which allows nearly all morphs from Picture 5 to 10 to be successfull acknowledged as shown in figure \ref{fig:Result1-5}. Only in 3 cases there is the distance way too high to work properly. The compared photos are 01-m-016-24.jpg, 01-m-016-25.jpg and 01-m-016-26.jpg from the same person, so this morph is not working. As a result in 4 out of 5 cases it is possible to morph two subjects to be successfull acknowledged, this makes a sucess chance of 80\%.
+OpenFace uses normally a threshold of \textbf{$0.99$}, which allows nearly all morphs from picture 5 to 10 to be successful acknowledged as shown in figure \ref{fig:Result1-5}. Only in 3 cases there is the distance way too high to work properly. The compare pictures are 01-m-016-24.jpg, 01-m-016-25.jpg and 01-m-016-26.jpg which are all from the same subject, so this morph with this subject is not working, this could be the cause of the different distances to the own compare images. As a result in 4 out of 5 cases it is possible to morph two subjects to be successful acknowledged, this makes a success chance of $80$\%.
 
 \begin{figure}[htbp] 
 	\centering
 		\includegraphics[width=0.95\textwidth]{Resources/result1.jpg}
-	\caption{Squared l2 distances (y axis) of morphs from 01-m-002-27 to 01-m-003-24 (with 15 steps ont he x axis) comparing to 01-m-002-28.jpg, 01-m-002-29.jpg, 01-m-002-30.jpg, 01-m-003-25.jpg, 01-m-003-26.jpg and 01-m-003-27.jpg}
+	\caption{Squared l2 euclidean distances (y axis) of morphs from 01-m-002-27 to 01-m-003-24 (with 15 steps ont he x axis) comparing to 01-m-002-28.jpg, 01-m-002-29.jpg, 01-m-002-30.jpg, 01-m-003-25.jpg, 01-m-003-26.jpg and 01-m-003-27.jpg}
 	\label{fig:Result1}
 \end{figure}
 
 \begin{figure}[htbp] 
 	\centering
 		\includegraphics[width=0.95\textwidth]{Resources/result1-5.jpg}
-	\caption{Squared l2 distances (y axis) of morphs from 01-m-002-27 to 01-m-003-24, 01-m-003-24 to 01-m-005-23, 01-m-004-23 to 01-m-005-23, 01-m-010-23 to 01-m-013-23 and 01-m-014-23 to 01-m-016-23 (with 15 steps on the x axis) comparing to the corresponding compare photos}
+	\caption{Squared l2 euclidean distances (y axis) of morphs from 01-m-002-27 to 01-m-003-24, 01-m-003-24 to 01-m-005-23, 01-m-004-23 to 01-m-005-23, 01-m-010-23 to 01-m-013-23 and 01-m-014-23 to 01-m-016-23 (with 15 steps on the x axis) comparing to the corresponding compare photos}
 	\label{fig:Result1-5}
 \end{figure}
 
 \begin{figure}[htbp] 
 	\centering
 		\includegraphics[width=0.95\textwidth]{Resources/result1-5-mean.jpg}
-	\caption{Mean squared l2 distances (y axis) of morphs from 01-m-002-27 to 01-m-003-24, 01-m-003-24 to 01-m-005-23, 01-m-004-23 to 01-m-005-23, 01-m-010-23 to 01-m-013-23 and 01-m-014-23 to 01-m-016-23 (with 15 steps on the x axis) comparing to the corresponding compare photos}
+	\caption{Mean squared l2 euclidean distances (y axis) of morphs from 01-m-002-27 to 01-m-003-24, 01-m-003-24 to 01-m-005-23, 01-m-004-23 to 01-m-005-23, 01-m-010-23 to 01-m-013-23 and 01-m-014-23 to 01-m-016-23 (with 15 steps on the x axis) comparing to the corresponding compare photos}
 	\label{fig:Result1-5-mean}
 \end{figure}
 \newpage
-\subsubsection{Subset of 39 morph sets}\label{sec:subset39}
-Now 39 sets of morphed subjects were used. The used subjects are:
+\subsubsection{Subset of 39 automatic generated morph sets}\label{sec:subset39}
+Now 39 automatic generated sets of morphed subjects were used. The used subjects are:
 \begin{multicols}{3}
 \begin{itemize}
 \item 01-m-002 - 01-m-003
@@ -107,30 +102,82 @@ Now 39 sets of morphed subjects were used. The used subjects are:
 \end{multicols}
 
 
-With these sets again the squared l2 distance is computed to the associated compare images of the two subjects. The resulting distances are shown in figure \ref{fig:Result39-all}. To decrease the amount of information the mean values for both subjects were computed and are shown in figure \ref{fig:Result39-mean}.
+With these sets again the squared l2 euclidean distances are computed to the associated compare images of the two subjects. The resulting distances are shown in figure \ref{fig:Result39-all}. To decrease the amount of information the mean values for both subjects were computed and are shown in figure \ref{fig:Result39-mean}. The distance graphs crosses by ($7.93$, $0.6$), so the best distance for both subjects is with picture 8 with distances of $0.6$ and $0.59$. Picture 8 is the exact middle of all 15 pictures with $50$\% of subject 1 and $50$\% of subject 2.
 \begin{figure}[htbp] 
 	\centering
 		\includegraphics[width=0.95\textwidth]{Resources/result39-all.jpg}
-	\caption{Squared l2 distances (y axis) of the subset of 39 morphs (with 15 steps on the x axis) comparing to the corresponding compare photos}
+	\caption{Squared l2 euclidean distances (y axis) of the subset of 39 morphs (with 15 steps on the x axis) comparing to the corresponding compare photos}
 	\label{fig:Result39-all}
 \end{figure}
 \begin{figure}[htbp] 
 	\centering
 		\includegraphics[width=0.95\textwidth]{Resources/result39-mean.jpg}
-	\caption{Mean squared l2 distances (y axis) of the subset of 39 morphs (with 15 steps on the x axis) comparing to the corresponding compare photos}
+	\caption{Mean squared l2 euclidean distances (y axis) of the subset of 39 morphs (with 15 steps on the x axis) comparing to the corresponding compare photos}
 	\label{fig:Result39-mean}
 \end{figure}
+
+\newpage
+\subsubsection{Subset of 8 manual generated morph sets}
+\label{sec:subsetman}
+Finally 8 sets of morphed subjects were created and the distances to the comparing images was calculated. As a speciality in this set a morph of a woman and a man.
+The subjects for the manual morphing are:
+\begin{multicols}{2}
+\begin{itemize}
+\item 01-m-002-27 - 01-m-003-24
+\item 01-m-003-24 - 01-m-005-23
+\item 01-m-004-23 - 01-m-005-23
+\item 01-m-010-23 - 01-m-013-23
+\item 01-m-014-23 - 01-m-016-23
+\item 01-m-017-23 - 01-m-019-23
+\item 01-m-020-23 - 01-w-002-23
+\item 01-w-036-23 - 01-w-037-23
+\end{itemize}
+\end{multicols}
+For this subset the squared l2 euclidean distances to the associated compare images of the two subjects is also computed. The resulting distances are shown in figure \ref{fig:result-jannis-all}. To decrease the amount of information the mean values for both subjects were computed and are shown in figure \ref{fig:result-jannis-mean}.
+
+\begin{figure}[htbp] 
+	\centering
+		\includegraphics[width=0.95\textwidth]{Resources/result-jannis.jpg}
+	\caption{Squared l2 euclidean distances (y axis) comparing to the corresponding compare photos of the subset of 8 manual morphs (with 30 steps on the x axis)}
+	\label{fig:result-jannis-all}
+\end{figure}
+\begin{figure}[htbp] 
+	\centering
+		\includegraphics[width=0.95\textwidth]{Resources/result-jannis-mean}
+	\caption{Mean squared l2 euclidean distances (y axis) comparing to the corresponding compare photos of the subset of 8 manual morphs (with 30 steps on the x axis)}
+	\label{fig:result-jannis-mean}
+\end{figure}
+
 \newpage
 \subsection{Threshold}
-As a result a threshold is computed to get a 10\% false accept and a 90\% chance to right decline a morphed image.\todo{richtige Bezeichnungen raussuchen} Used for the calculation is the subset and its distances of section \ref{sec:subset39}.
+As a result a threshold is computed to get a $10$\% false accept and a $90$\% chance to right decline a morphed image.\todo{richtige Bezeichnungen raussuchen}
+
+\subsubsection{Automatic morphing (Subset of 39 automatic generated morph sets)}\label{sec:automorph-thres}
+For the calculation of the threshold of the automatic generated morphs the subset of 39 of section \ref{sec:subset39} is used, it's bigger than the subset of 5 automatic generated morph sets (from subjects also used by Budrhani) of section \ref{sec:subset5} so the used mean values are more representative.
+Used for the calculation are the squared l2 euclidean distances of section \ref{sec:subset39}.
 The resulting threshold for this subset is \textbf{$0.78666402$}. In contrast to the distances it is shown in figure \ref{fig:Result39-90-10}.
 
 
 \begin{figure}[htbp] 
 	\centering
 		\includegraphics[width=0.95\textwidth]{Resources/result39-90-10.jpg}
-	\caption{Squared l2 distances (y axis) of the subset of 39 morphs (with 15 steps on the x axis) compared to the corresponding compare photos, in contrast to the calculated threshold of $0.78666402$} %\todo{beschreibung anpassen}
+	\caption{Squared l2 euclidean distances (y axis) of the subset of 39 morphs (with 15 steps on the x axis) compared to the corresponding compare photos, in contrast to the calculated threshold of $0.76891524$} %\todo{beschreibung anpassen}
 	\label{fig:Result39-90-10}
 \end{figure}
+
+\subsubsection{Manual morphing (Subset of 8 manual generated morph sets)}\label{sec:manmorph-thres}
+For the calculation of the threshold of the manual generated morphs the subset of 8 of section \ref{sec:subsetman} is used and the calculated distances from the same section.
+The resulting threshold for this subset is \textbf{$0.76891524$}. In contrast to the distances it is shown in figure \ref{fig:Resultman-90-10}.
+
+
+\begin{figure}[htbp] 
+	\centering
+		\includegraphics[width=0.95\textwidth]{Resources/result-jannis-mean-90-10.jpg}
+	\caption{Squared l2 euclidean distances (y axis) of the subset of 8 manual morphs (with 30 steps on the x axis) compared to the corresponding compare photos, in contrast to the calculated threshold of $0.7172467154$} %\todo{beschreibung anpassen}
+	\label{fig:Resultman-90-10}
+\end{figure}
+
+\subsubsection{Comparison threshold of manual and automatic}\label{sec:comp-thres}
+
 
 \todo[inline]{manual machen und vergleichen}
