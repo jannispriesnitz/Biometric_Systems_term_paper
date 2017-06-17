@@ -1,14 +1,18 @@
 \section{Database and selection of test subjects}
-As test sample a data set of XXX\todo{how many?} ICAO compliant pictures were given. In order to get promising morph results, a subset of XX \todo{number} pairs of photos were selected for manual morphing \ref{manual_morph} where as the automatic morphing algorithm \ref{automatic_morph} was applied on all data sets. For manual  morphing only pairs with a visually high coincidence are considered because the aceptance rate of the comparison algorithem is expected to be higher. 
-In summation XX manual and XXX automatic morphs are issued in this paper. 
+As test sample a data set of XXX\todo{how many?} ICAO compliant pictures were given. The data set provided to us is part of the FaceDB database, which  fulfils all parts of our requirements to biometric data sets. In order to get promising morph results, a subset of XX \todo{number} pairs of photos were selected for manual morphing \ref{manual_morph} where as the automatic morphing algorithm \ref{automatic_morph} was applied on all data sets. For manual  morphing only pairs with a visually high coincidence are considered because the acceptance rate of the comparison algorithm is expected to be higher. 
+In summation XX manual and XXX automatic morphs are issued in this paper. \footnote{Note that manual morphing is a quite time consuming process and for this reason only a limited amount of manual morphes could be examined.}
 \todo[inline]{how many men women?}
 
+
+\todo[inline]{IN HAUPTTEXT INTEGRIERT: FaceDB}
+
+
+
 \subsection{ICAO compliance}
+\todo[inline]{DONE ICAO conformance beschrieben}
 To fulfil ICAO compliance, a picture has to meet several properties. The whole face should be shown as well as the right and left half. The face, without the hair, should cover 70 - 80 \% of the photo and should be in a centered positon without any rotations. The phote has to be sharp, clear and contrasty in all sections and should be enlightened homogeneously in all passages without reflexions. As background and single collared contrasty surface without shadows should be selected. The subject has to look into the camera directly. Especially if the subject wears glasses, reflections should be avoided and the eyes must not be covered by parts of the glasses. The pose should be neutral and the mouth has to be closed. The wearing of headpieces is omitted but can be permitted e.g. because of religious reasons or long lasting head injuries\cite{bdi2010Verordnung}. 
 
 All photos used in this work are ICAO compliant or nearly ICAO compliant, with respect to the above criteria. Some of the pictures had the wrong format (the subject was too close to camera). These photos were reformatted to meet the standard with digital post production. It can be ruled out that the post production has any effect on recognition algorithm. 
-\todo[inline]{DONE ICAO conformance beschrieben}
-\todo[inline]{FaceDB}
 
 \section{Morphing of Faces}
 The main task during the morphing of two pictures is to detect characteristics and place landmarks as an advince for the algorithm. This can be done completely automatic or with support of an user. In this paper both way are discussed.  
@@ -68,42 +72,37 @@ In contrast to the automatic face morphing approach, manual morphing is discusse
 
 To achieve morphes, the open source software GNU Image Manipulation Software (GIMP) (Version 2.8.16) with the GIMP Animation Package (GAP) (Version 2.6) was selected for this process. Morphing with GAP follows the simple approach of manually placing connected landmarks at characterizing points in both faces. In \ref{fig:manual_morph} two pictures with a setup of landmarks are shown. It can be observed, that the landmarks are placed at characterizing points in both faces, e.g. at the eye browns, lips and nose. The general shape of the face as well as the shape of the head including the hair is also respected. In the example the facial landmarks are close to each other whereas the landmarks describing the shape of the hair are farer apart. 
 
-The selection of characterizing points \todo{regions?}is based on *erkenntnissen* from earlier works on the topic of automatic face recognition, to achieve an optimal morphing result compared with own estimasation based on the individual appeance of the subjects. \todo{cite handbook of bio p.60} \todo{cite these fancy mp4 thingy}. 
-
-\cite{vukadinovic2005fully}
-
-
-
+The selection of characterizing points \todo{regions?} is based on findings \todo{erkenntnissen?} from earlier works on the topic of automatic face recognition, to achieve an optimal morphing result compared with own estimation based on the individual appearance of the subjects. \cite[60ff]{jain2008handbook} \cite{amos2016openface} \todo{DONE cite handbook of bio p.60} \todo{cite these fancy mp4 thingy}.
 The algorithm shifts the landmarks from face one to face two. In addition to this the color of the skin is transmitted. 
 
 %\subsubsection*{Morphing setup}
 For the test samples 100 - 125 landmarks were placed, depending on the face characteristics. The output contains a sequence of 30 photos which show different stages of the morphing procedure. \ref{1e}
 
 
-\subsubsection*{Results}
+\subsubsection{Results}
 \todo{compare to automatic results when there.}
 \begin{figure}[h]
 	\centering
 	\subfloat[Subject 1]{%
-		\includegraphics[width=0.30\linewidth]{Resources/p1.jpg}
+		\includegraphics[width=0.19\linewidth]{Resources/p1.jpg}
 	\label{1a}}\hfill
 	\subfloat[Morph no. 5]{%
-		\includegraphics[width=0.30\linewidth]{Resources/m1.jpg}
-	\label{foo}}\\
+		\includegraphics[width=0.19\linewidth]{Resources/m1.jpg}
+	\label{1b}}\hfill
 	\subfloat[Morph no. 15]{%
-		\includegraphics[width=0.30\linewidth]{Resources/m2.jpg}
-	\label{1c}} \hfill
+		\includegraphics[width=0.19\linewidth]{Resources/m2.jpg}
+	\label{foo}} \hfill
 	\subfloat[Morph no. 25]{%
-		\includegraphics[width=0.30\linewidth]{Resources/m3.jpg}
+		\includegraphics[width=0.19\linewidth]{Resources/m3.jpg}
 	\label{1d}}\hfill
 	\subfloat[Subject 2]{%
-		\includegraphics[width=0.30\linewidth]{Resources/p2.jpg}
+		\includegraphics[width=0.19\linewidth]{Resources/p2.jpg}
 	\label{1e} }
-	\caption{Example of two ICAO compliant photos (1a and 1e) and morphs at stage 5 (1b), 15 (1c) and 25 (1d)}
+	\caption{Example of two ICAO compliant photos (\ref{1a} and \ref{1e}) and morphs at stage 5 (\ref{1b}), 15 (\ref{foo}) and 25 (\ref{1d})}
 	\label{fig1} 
 \end{figure}
 
 In figure \ref{fig1} a two subjects and three morphing stages (5, 15 and 25) are shown. The visual inspection of \ref{1a} shows biometric features of both subjects whereas \subref{1e} and \ref{1d} has more similarity to the closer subject but also covers features of the other subject.
 A manual post production of the morphs is not necessary because potential revealing details, like the interference \todo{?} of the clothes, glasses or hair is not considered by the algorithm.
 
-\todo[inline]{Detailed description of the morphs}
+\todo[inline]{OK Detailed description of the morphs}

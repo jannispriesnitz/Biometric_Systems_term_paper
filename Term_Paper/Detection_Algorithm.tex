@@ -1,7 +1,8 @@
 \section{Face detection}
+For our experiments a face detection and recognition is needed. All tests were made with the open source software OpenFace, which was initially released in 2015 and up to now appears to be quite active\cite{amos2016openface}.
 
 \subsection*{Detection algorithm} % alternativ Test setup?
-As face detection algorithm the open source software OpenFace was selected. OpenFace is based on a neural network with is fully trained and has high confidence rates in the shipped version. Because OpenFaces main goal is to detect faces on arbitrary photos, the accuracy level is expected to be higher if it works on ICAO compliant data sets. 
+As face detection algorithm the open source software OpenFace was selected. OpenFace is based on a neural network with is fully trained and has high confidence rates in the shipped version \cite{baltruvsaitis2016openface}. Because OpenFaces main goal is to detect faces on arbitrary photos, the accuracy level is expected to be higher if it works on ICAO compliant data sets. 
 
 \todo{OBSOLOETE ICAO compliance}
 
@@ -12,3 +13,11 @@ The expected outcome of comparison algorithm is an almost equal match rate for m
 
 \todo[inline]{hier distances abstrakt beschreiben}
 \todo[inline]{beschreiben welcher thershold gewählt wurd und warum}
+\subsection{Distance and Threshold}
+OpenFace determines the similarity level of two subjects by computing the squared Euclidean distance between characterizing points in both faces. The lower the distance is the higher is the similarity of the two subjects. 
+For determining if two pictures are from the same subject a threshold is determined with the property that distances lower than the threshold are seen as same subject and distances high as different ones. 
+Facing this it is obvious, that subjects with a naturally given high similarity have a lower distance. The original threshold is at 0.999 which reveals different but very similar subject (e.g. twins) as different. Detection capabilities because of morphing are not known up to now.
+In \autoref{Threshold} we suggest a threshold for our approaches. 
+%The OpenFace results are obtained by computing the squared Euclidean distance on the pairs and labeling pairs under a threshold as being the same person and above the threshold as different people.  The best threshold on the training folds is used as the threshold on the remaining fold.  In nine out of ten experiments, the best threshold is 0.99.  Figure 7 compares OpenFace’s accuracy with other techniques.  Unlike the modern deep neural network-based techniques, the Eigenfaces result uses no outside data.
+
+\todo{NO split?}

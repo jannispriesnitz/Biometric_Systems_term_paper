@@ -4,6 +4,7 @@ Resulting from the work are the squared l2 euclidean distances calculated with t
 \subsection{Distances}
 
 \subsubsection{Subset of 5 automatic generated morph sets (from biometric references also used by Budrhani)}\label{sec:subset5}
+\todo{Vllt. sollten wir die Überschrift ändern - Wer ist Budrhani?}
 All resultingsquared l2 euclidean distances for the morphed photos of biometric references 01-m-002-27 to 01-m-003-24, 01-m-003-24 to 01-m-005-23, 01-m-004-23 to 01-m-005-23, 01-m-010-23 to 01-m-013-23 and 01-m-014-23 to 01-m-016-23 compared to the corresponding compare images are way too much data. So there is as an example of the morphed image 01-m-002-27 - 01-m-003-24:
 
 \begin{tabular}{lrrrrrr}
@@ -148,8 +149,9 @@ For this subset the squared l2 euclidean distances to the associated compare ima
 	\label{fig:result-jannis-mean}
 \end{figure}
 
-\newpage
+%\newpage
 \subsection{Threshold}
+\label{Threshold}
 As a result a threshold is computed to get a $10$\% biometric false acceptance of an impostor (false match rate (FMR)) and a $90$\% chance to non-match a morphed image.
 
 \subsubsection{Automatic morphing (Subset of 39 automatic generated morph sets)}\label{sec:automorph-thres}
@@ -178,6 +180,8 @@ The resulting threshold for this subset is \textbf{$0.7172467154$}. In contrast 
 \end{figure}
 
 \subsubsection{Comparison threshold of manual and automatic}\label{sec:comp-thres}
-The two tresholds of the automatic morphing from \ref{sec:automorph-thres} $0.76891524$ and the manual morphing \ref{sec:manmorph-thres} $0.7172467154$ are close to another. They differ only about $0.05$, which is not much. The threshold of the manual morphing is lower than the automatic threshold, this could mean that the images of the manual morphing are better, but such a low difference could also be possible through lower the distances because of the input biometric reference variations.
+The two tresholds of the automatic morphing from \autoref{sec:automorph-thres} $0.76891524$ and the manual morphing in \autoref{sec:manmorph-thres} $0.7172467154$ are close to another. They differ only about $0.05$, which is not much. The threshold of the manual morphing is lower than the automatic threshold, this could mean that the images of the manual morphing are better, but such a low difference could also be possible through lower the distances because of the input biometric reference variations.
 
-As a result the threshold of OpernFace should be set to $0.71$ to fight off morphing attacks, in fact the biometric false rejection rate in the biometric system is acceptable.
+As a result the threshold of OpenFace should be set to $0.71$ to fight off morphing attacks, in fact the biometric false rejection rate in the biometric system is acceptable.
+
+\todo[inline]{Compare to threshold of other papers: Suggestion: Compared to \cite{ferrara2014magic} which is based on \cite{baltruvsaitis2016openface} (threshold of 0.999) we were able to show that a 90-10 threshold is already achieved at a much lower distance. }
