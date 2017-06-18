@@ -1,6 +1,7 @@
 \section{Database and selection of test subjects}
-As test sample a data set of XXX\todo{how many?} ICAO compliant pictures were given. The data set provided to us is part of the FaceDB database, which  fulfils all parts of our requirements to biometric data sets. In order to get promising morph results, a subset of XX \todo{number} pairs of photos were selected for manual morphing \ref{manual_morph} where as the automatic morphing algorithm \ref{automatic_morph} was applied on all data sets. For manual  morphing only pairs with a visually high coincidence are considered because the acceptance rate of the comparison algorithm is expected to be higher. 
-In summation XX manual and XXX automatic morphs are issued in this paper. \footnote{Note that manual morphing is a quite time consuming process and for this reason only a limited amount of manual morphes could be examined.}
+\label{Database}
+As test sample a data set of 136\todo{how many?} ICAO compliant pictures were given. The data set provided to us is part of the FaceDB database, which  fulfils all parts of our requirements to biometric data sets. In order to get promising morph results, a subset of 10 \todo{number} pairs of photos were selected for manual morphing (\ref{manual_morph}) where as the automatic morphing algorithm (\ref{automatic_morph}) was applied on all data sets. For manual  morphing only pairs with a visually high coincidence are considered because the acceptance rate of the comparison algorithm is expected to be higher. 
+In summation 5 manual and XXX automatic morphs are issued in this paper. \footnote{Note that manual morphing is a quite time consuming process and for this reason only a limited amount of manual morphes could be examined.}
 \todo[inline]{how many men women?}
 
 
@@ -15,6 +16,7 @@ To fulfil ICAO compliance, a picture has to meet several properties. The whole f
 All photos used in this work are ICAO compliant or nearly ICAO compliant, with respect to the above criteria. Some of the pictures had the wrong format (the subject was too close to camera). These photos were reformatted to meet the standard with digital post production. It can be ruled out that the post production has any effect on recognition algorithm. 
 
 \section{Morphing of Faces}
+\label{morphing}
 The main task during the morphing of two pictures is to detect characteristics and place landmarks as an advince for the algorithm. This can be done completely automatic or with support of an user. In this paper both way are discussed.  
 \subsection{Basic idea}
 \label{percentageMorph}
@@ -40,7 +42,7 @@ For every morph there were 15 images created from 0\% of Subject 1 to 100\%, res
 \todo[inline]{say something on this + make tabular}
 \subsection{Automatic morphing}
 \label{automatic_morph}
-To generate automatic face morphed images the software FantaMorph 5 was used in this paper. FantaMorph has the ability to create automaticaly morphed faces of to subjects. For this the software defines automaticaly the landmarks for both faces. These can be adjusted manually by the user afterwards, but in this paper this isn't used. Then the software generates a transition from face 1 to face 2 in a given number of steps, so called frames. For this paper a number of 15 steps is used. FantaMorph accepts a list of subjects to which it creates then a sequence to morph from one face to another. It doesn't morph every given subject with every given subject, only from subject 1 to subject 2 and then subejct 2 to subject 3 and so on. So it was not possible to create morphed faces of all subjects instead subsets were created and later on used.\todo{FantaMorph face detection example (2 faces, ein gutes, ein schlechtes)}
+To generate automatic face morphed images the software FantaMorph 5 was used in this paper. FantaMorph has the ability to create automaticaly morphed faces of to subjects. For this the software defines automatically the landmarks for both faces. These can be adjusted manually by the user afterwards, but in this paper this isn't used. Then the software generates a transition from face 1 to face 2 in a given number of steps, so called frames. For this paper a number of 15 steps is used. FantaMorph accepts a list of subjects to which it creates then a sequence to morph from one face to another. It doesn't morph every given subject with every given subject, only from subject 1 to subject 2 and then subejct 2 to subject 3 and so on. So it was not possible to create morphed faces of all subjects instead subsets were created and later on used.\todo{FantaMorph face detection example (2 faces, ein gutes, ein schlechtes)}
 
 \subsubsection{Results}
 The resulting morphed sets are 4 different subsets of morphs. The first is the subset of all men sequentially morphed, the second is all women sequentially morphed and the third is all men alternating women sequentially morphed, the last one is the set used from Budrhani.
@@ -65,7 +67,7 @@ For example in figure XXX is shown a morphed set of XXX and XXX with 15 steps. P
 	\subfloat[Morph no. 5]{%
 		\includegraphics[width=0.25\linewidth]{Resources/manualmorph02.jpg}}
 	\label{subfig:manualmorph02}\\
-	\caption{Example of two ICAO compliant photos (1a and 1e) and morphs at stage 5 (1b), 15 (1c) and 25 (1d)}
+	\caption{Example of two ICAO compliant photos with manually set and shifted landmarks.}
 	\label{fig:manual_morph} 
 \end{figure}
 In contrast to the automatic face morphing approach, manual morphing is discussed in this section. 
