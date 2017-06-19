@@ -72,10 +72,10 @@ For example in figure XXX is shown a morphed set of XXX and XXX with 15 steps. P
 \end{figure}
 In contrast to the automatic face morphing approach, manual morphing is discussed in this section. 
 
-To achieve morphes, the open source software GNU Image Manipulation Software (GIMP) (Version 2.8.16) with the GIMP Animation Package (GAP) (Version 2.6) was selected for this process. Morphing with GAP follows the simple approach of manually placing connected landmarks at characterizing points in both faces. In \ref{fig:manual_morph} two pictures with a setup of landmarks are shown. It can be observed, that the landmarks are placed at characterizing points in both faces, e.g. at the eye browns, lips and nose. The general shape of the face as well as the shape of the head including the hair is also respected. In the example the facial landmarks are close to each other whereas the landmarks describing the shape of the hair are farer apart. 
+To achieve morphes, the open source software GNU Image Manipulation Software (GIMP) (Version 2.8.16) with the GIMP Animation Package (GAP) (Version 2.6) was selected. Morphing with GAP follows the simple approach of manually placing connected landmarks at characterizing points in both faces. In \autoref{fig:manual_morph}, two pictures with a setup of landmarks are shown. It can be observed that the landmarks are placed at characterizing points in both faces, e.g. at the eye browns, lips and nose. The general shape of the face as well as the shape of the head, including the hair, is also respected. In the example, the facial landmarks are close to each other, whereas the landmarks describing the shape of the hair are further apart. 
 
 The selection of characterizing points \todo{regions?} is based on findings \todo{erkenntnissen?} from earlier works on the topic of automatic face recognition, to achieve an optimal morphing result compared with own estimation based on the individual appearance of the subjects. \cite[60ff]{jain2008handbook} \cite{amos2016openface} \todo{DONE cite handbook of bio p.60} \todo{cite these fancy mp4 thingy}.
-The algorithm shifts the landmarks from face one to face two. In addition to this the color of the skin is transmitted. 
+The algorithm shifts the landmarks from face one to face two. In addition to this, the colour of the skin is transmitted. 
 
 %\subsubsection*{Morphing setup}
 For the test samples 100 - 125 landmarks were placed, depending on the face characteristics. The output contains a sequence of 30 photos which show different stages of the morphing procedure. \ref{1e}
@@ -104,7 +104,7 @@ For the test samples 100 - 125 landmarks were placed, depending on the face char
 	\label{fig1} 
 \end{figure}
 
-In figure \ref{fig1} a two subjects and three morphing stages (5, 15 and 25) are shown. The visual inspection of \ref{1a} shows biometric features of both subjects whereas \subref{1e} and \ref{1d} has more similarity to the closer subject but also covers features of the other subject.
+In figure \ref{fig1} a two subjects and three morphing stages (5, 15 and 25) are shown. The visual inspection of \ref{1a} shows biometric features of both subjects whereas \subref{1e} and \ref{1d} have more similarity to the closer subject but also covers features of the other subject.
 A manual post production of the morphs is not necessary because potential revealing details, like the interference \todo{?} of the clothes, glasses or hair is not considered by the algorithm.
 
 \todo[inline]{OK Detailed description of the morphs}
