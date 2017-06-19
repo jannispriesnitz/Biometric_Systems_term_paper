@@ -1,7 +1,7 @@
 \section{Database and selection of test subjects}
 \label{Database}
-As test sample a data set of 136 ICAO compliant pictures were given. The data set provided to us is part of the FaceDB database, which  fulfils all parts of our requirements to biometric data sets. In order to get promising morph results, a subset of 10 \todo{number} pairs of photos were selected for manual morphing (\ref{manual_morph}) where as the automatic morphing algorithm (\ref{automatic_morph}) was applied on different data subsets. For manual  morphing only pairs with a visually high coincidence are considered because the acceptance rate of the comparison algorithm is expected to be higher. 
-In summation 5 manual and 45 automatic morphs are issued in this paper. \footnote{Note that manual morphing is a quite time consuming process and for this reason only a limited amount of manual morphes could be examined.}
+As test samples, a data set of 136 ICAO compliant pictures were given. The data set provided to us is part of the FaceDB database, which  fulfils all parts of our requirements to biometric data sets. In order to get promising morph results, a subset of 10 \todo{number} pairs of photos were selected for manual morphing (\ref{manual_morph}) whereas the automatic morphing algorithm (\ref{automatic_morph}) was applied on different data subsets. For manual  morphing, only pairs with a visually high similarity are considered because the acceptance rate of the comparison algorithm is expected to be higher. 
+In sum, 5 manual and 45 automatic morphs are issued in this paper. \footnote{Note that manual morphing is a quite time consuming process and for this reason only a limited amount of manual morphes could be examined.}
 \todo[inline]{how many men women?}
 
 
@@ -11,13 +11,13 @@ In summation 5 manual and 45 automatic morphs are issued in this paper. \footnot
 
 \subsection{ICAO compliance}
 \todo[inline]{DONE ICAO conformance beschrieben}
-To fulfil ICAO compliance, a picture has to meet several properties. The whole face should be shown as well as the right and left half. The face, without the hair, should cover 70 - 80 \% of the photo and should be in a centered positon without any rotations. The phote has to be sharp, clear and contrasty in all sections and should be enlightened homogeneously in all passages without reflexions. As background and single collared contrasty surface without shadows should be selected. The subject has to look into the camera directly. Especially if the subject wears glasses, reflections should be avoided and the eyes must not be covered by parts of the glasses. The pose should be neutral and the mouth has to be closed. The wearing of headpieces is omitted but can be permitted e.g. because of religious reasons or long lasting head injuries\cite{bdi2010Verordnung}. 
+To fulfil ICAO compliance, a picture has to meet several properties. The whole face should be shown as well as the right and left half. The face, without the hair, should cover 70 - 80 \% of the photo and should be in a centered positon without any rotations. The phote has to be sharp, clear and contrasty in all sections and should be illuminated homogeneously in all passages without reflexions. As background, a single coloured contrasty surface without shadows should be selected. The subject has to look directly into the camera. Especially if the subject wears glasses, reflections should be avoided and the eyes must not be covered by parts of the glasses. The pose should be neutral and the mouth has to be closed. The wearing of headpieces is forbidden but can be permitted e.g. because of religious reasons or long lasting head injuries\cite{bdi2010Verordnung}. 
 
-All photos used in this work are ICAO compliant or nearly ICAO compliant, with respect to the above criteria. Some of the pictures had the wrong format (the subject was too close to camera). These photos were reformatted to meet the standard with digital post production. It can be ruled out that the post production has any effect on recognition algorithm. 
+All photos used in this work are ICAO compliant or nearly ICAO compliant, with respect to the criteria mentioned above. Some of the pictures had the wrong format (the subject was too close to camera). These photos were reformatted to meet the standard with digital post production. It can be ruled out that the post production has any effect on the recognition algorithm. 
 
 \section{Morphing of Faces}
 \label{morphing}
-The main task during the morphing of two pictures is to detect characteristics and place landmarks as an advince for the algorithm. This can be done completely automatic or with support of an user. In this paper both way are discussed.  
+The main task during the morphing of two pictures is to detect characteristics and place landmarks as an instruction for the algorithm. This can be done completely automatic or with the support of a user. In this paper both ways are discussed.  
 \subsection{Basic idea}
 \label{percentageMorph}
 For every morph there were 15 images for automatic and 30 for manual created from 0\% of Subject 1 to 100\%, respectively the remaining \% of Person 2. So as an example the 15 images for automatic are combined of:
