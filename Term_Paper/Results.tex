@@ -1,7 +1,7 @@
 % !TeX root = main.tex
 \section{Results}
 \label{Results}
-Resulting from the work are the squared l2 euclidean distances calculated with the program OpenFace. The distance shows the similiarity to the given biometric references, it is a dissimilarity score. A lower distance means the compared two biometric references are more equal, when the distance is under a given threshold, these two biometric references are accepted to be the same biometric reference and so access is given. The resulting morphed photos were compared to diffrent photos of both biometric references, to get a independend distance. Which percentage of each biometric reference and the picture number is shown in \ref{percentageMorph}.
+The squared l2 euclidean distances calculated with the program OpenFace are resulting from the work. The distance shows the similiarity to the given biometric references, it is a dissimilarity score. A lower distance means the compared two biometric references are more equal, when the distance is under a given threshold, these two biometric references are accepted to be the same biometric reference and so access is given. The resulting morphed photos were compared to diffrent photos of both biometric references, to get a independend distance. Which percentage of each biometric reference and the picture number is shown in \ref{percentageMorph}.
 \subsection{Distances}
 
 \subsubsection{Subset of 5 automatic generated morph sets}\label{sec:subset5}
@@ -9,7 +9,7 @@ Resulting from the work are the squared l2 euclidean distances calculated with t
 All resultingsquared l2 euclidean distances for the morphed photos of biometric references 01-m-002-27 to 01-m-003-24, 01-m-003-24 to 01-m-005-23, 01-m-004-23 to 01-m-005-23, 01-m-010-23 to 01-m-013-23 and 01-m-014-23 to 01-m-016-23 compared to the corresponding compare images are way too much data. So there is as an example of the morphed image 01-m-002-27 - 01-m-003-24:
 
 \begin{tabular}{lrrrrrr}
-	Picture & 01-m-002-28 & 01-m-002-29 & 01-m-002-30 & 01-m-003-25 & 01-m-003-26 & 01-m-003-27 \\
+	Picture & m-02-28 & m-02-29 & m-02-30 & m-03-25 & m-03-26 & m-03-27\\
 	 & & & & & & \\
 	1 & 0.11916 & 0.07499 & 0.19188 & 1.30874 & 1.16709 & 1.31322\\
 	2 & 0.13701 & 0.06885 & 0.18756 & 1.25716 & 1.10248 & 1.25841\\ 
@@ -32,14 +32,14 @@ Also shown in figure \ref{fig:Result1}.
 
 The results of the 01-m-002-27 to 01-m-003-24, 01-m-003-24 to 01-m-005-23, 01-m-004-23 to 01-m-005-23, 01-m-010-23 to 01-m-013-23 and 01-m-014-23 to 01-m-016-23 morphs are shown in figure \ref{fig:Result1-5}.
 
-For better recognizability the mean value of all the diffrent squared l2 euclidean distances is calculated for biometric reference 1 and biometric reference 2. The result is shwon in figure \ref{fig:Result1-5-mean}. The distance graphs crosses by ($9.04$, $0.49$), so the best distance for both biometric references is with picture 9 with distances of $0.48$ and $0.49$. Picture 9 with $42.86$\% of biometric reference 1 and $57.14$\% of biometric reference 2 so it  not the middle of all 15 pictures, this could be the cause of the different distances of the biometric references to their own compare images.
+For better recognizability the average value of all the squared l2 euclidean distance values is calculated for biometric reference 1 and biometric reference 2. The result is shwon in figure \ref{fig:Result1-5-mean}. The distance graphs of subject 1 and 2 crosses at ($9.04$, $0.49$), so the best distance for both biometric references is in picture 9 with distances of $0.48$ and $0.49$. Picture 9 contains $42.86$\% of biometric reference 1 and $57.14$\% of biometric reference 2 so it not the middle of all 15 pictures, this could be because of the different distances of the biometric references to their own compare images.
 
-OpenFace uses normally a threshold of \textbf{$0.99$}, which allows nearly all morphs from picture 5 to 10 to be successful acknowledged as shown in figure \ref{fig:Result1-5}. Only in 3 cases there is the distance way too high to work properly. The compare pictures are 01-m-016-24.jpg, 01-m-016-25.jpg and 01-m-016-26.jpg which are all from the same biometric reference, so this morph with this biometric reference is not working, this could be the cause of the different distances to the own compare images. As a result in 4 out of 5 cases it is possible to morph two biometric references to be successful acknowledged, this makes a success chance of $80$\%.
+OpenFace uses normally a threshold of \textbf{$0.9999$}, which allows nearly all morphs from picture 5 to 10 to be successful acknowledged as shown in figure \ref{fig:Result1-5}. Only in 3 cases there is the distance way too high to work properly. The compare pictures are 01-m-016-24, 01-m-016-25 and 01-m-016-26 which are all from the same biometric reference, so this morph with this biometric reference is not working, this could be because of the different distances to the own compare images again. As a result in 4 out of 5 cases it is possible to morph two biometric references to be successful acknowledged, this makes a success chance of $80$\% for this subset.
 
 \begin{figure}[htbp] 
 	\centering
 		\includegraphics[width=0.95\textwidth]{Resources/result1ODF.eps}
-	\caption{Squared l2 euclidean distances (y axis) of morphs from 01-m-002-27 to 01-m-003-24 (with 15 steps ont he x axis) comparing to 01-m-002-28.jpg, 01-m-002-29.jpg, 01-m-002-30.jpg, 01-m-003-25.jpg, 01-m-003-26.jpg and 01-m-003-27.jpg}
+	\caption{Squared l2 euclidean distances (y axis) of morphs from 01-m-002-27 to 01-m-003-24 (with 15 steps on the x axis) comparing to 01-m-002-28, 01-m-002-29, 01-m-002-30, 01-m-003-25, 01-m-003-26 and 01-m-003-27}
 	\label{fig:Result1}
 \end{figure}
 
