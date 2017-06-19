@@ -1,7 +1,7 @@
 % !TeX root = main.tex
 \section{Results}
 \label{Results}
-The squared l2 euclidean distances calculated with the program OpenFace are resulting from the work. The distance shows the similiarity to the given biometric references, it is a dissimilarity score. A lower distance means the compared two biometric references are more equal, when the distance is under a given threshold, these two biometric references are accepted to be the same biometric reference and so access is given. The resulting morphed photos were compared to diffrent photos of both biometric references, to get a independend distance. Which percentage of each biometric reference and the picture number is shown in \ref{percentageMorph}.
+The squared l2 euclidean distances calculated with the program OpenFace are resulting from the work. The distance shows the similiarity of the given biometric references, it is a dissimilarity score. A lower distance means the compared two biometric references are more equal when the distance is under a given threshold; these two biometric references are accepted to be the same biometric reference and so access is given. The resulting morphed photos were compared to diffrent photos of both biometric references, to get an independend distance. The percentage of each biometric reference and the picture number is shown in \ref{percentageMorph}.
 \subsection{Distances}
 
 \subsubsection{Subset of 5 automatic generated morph sets}\label{sec:subset5}
@@ -32,9 +32,9 @@ Also shown in figure \ref{fig:Result1}.
 
 The results of the 01-m-002-27 to 01-m-003-24, 01-m-003-24 to 01-m-005-23, 01-m-004-23 to 01-m-005-23, 01-m-010-23 to 01-m-013-23 and 01-m-014-23 to 01-m-016-23 morphs are shown in figure \ref{fig:Result1-5}.
 
-For better recognizability the average value of all the squared l2 euclidean distance values is calculated for biometric reference 1 and biometric reference 2. The result is shwon in figure \ref{fig:Result1-5-mean}. The distance graphs of subject 1 and 2 crosses at ($9.04$, $0.49$), so the best distance for both biometric references is in picture 9 with distances of $0.48$ and $0.49$. Picture 9 contains $42.86$\% of biometric reference 1 and $57.14$\% of biometric reference 2 so it not the middle of all 15 pictures, this could be because of the different distances of the biometric references to their own compare images.
+For better recognizability the average value of all the squared l2 euclidean distance values is calculated for biometric reference 1 and biometric reference 2. The result is shown in figure \ref{fig:Result1-5-mean}. The distance graph of subject 1 and 2 cross at ($9.04$, $0.49$), so the best distance for both biometric references is in picture 9 with distances of $0.48$ and $0.49$. Picture 9 contains $42.86$\% biometric reference 1 and $57.14$\% biometric reference 2, so it not the middle of all 15 pictures, this could be because of the different distances of the biometric references to their own comparison-images.
 
-OpenFace uses normally a threshold of \textbf{$0.9999$}, which allows nearly all morphs from picture 5 to 10 to be successful acknowledged as shown in figure \ref{fig:Result1-5}. Only in 3 cases there is the distance way too high to work properly. The compare pictures are 01-m-016-24, 01-m-016-25 and 01-m-016-26 which are all from the same biometric reference, so this morph with this biometric reference is not working, this could be because of the different distances to the own compare images again. As a result in 4 out of 5 cases it is possible to morph two biometric references to be successful acknowledged, this makes a success chance of $80$\% for this subset.
+OpenFace normally uses threshold of \textbf{$0.9999$}, which allows nearly all morphs from picture 5 to 10 to be successfully acknowledged as shown in figure \ref{fig:Result1-5}. Only in 3 cases the distance is way too high to work properly. The comparison-images are 01-m-016-24, 01-m-016-25 and 01-m-016-26 which are all from the same biometric reference, so this morph with this biometric reference is not working, this could be because of the different distances to the own comparison-images again. As a result in 4 out of 5 cases it is possible to morph two biometric references to be successful acknowledged, which makes a success chance of $80$\% for this subset.
 
 \begin{figure}[htbp] 
 	\centering
@@ -104,7 +104,7 @@ Now 39 automatic generated sets of morphed biometric references were used. The u
 \end{multicols}
 
 
-With these sets again the squared l2 euclidean distances are computed to the associated compare images of the two biometric references. The resulting distances are shown in figure \ref{fig:Result39-all}. To decrease the amount of information the mean values for both biometric references were computed and are shown in figure \ref{fig:Result39-mean}. The distance graphs crosses by ($7.93$, $0.6$), so the best distance for both biometric references is with picture 8 with distances of $0.6$ and $0.59$. Picture 8 is the exact middle of all 15 pictures with $50$\% of biometric reference 1 and $50$\% of biometric reference 2.
+With these sets, again, the squared l2 euclidean distances are computed to the associated comparison-images of the two biometric references. The resulting distances are shown in figure \ref{fig:Result39-all}. To decrease the amount of information, the mean values for both biometric references were computed and are shown in figure \ref{fig:Result39-mean}. The distance graph cross at ($7.93$, $0.6$), so the best distance for both biometric references is in picture 8 with distances of $0.6$ and $0.59$. Picture 8 is the exact middle of all 15 pictures with $50$\% biometric reference 1 and $50$\% biometric reference 2.
 \begin{figure}[htbp] 
 	\centering
 		\includegraphics[width=0.95\textwidth]{Resources/result39-allODF.eps}
@@ -121,7 +121,7 @@ With these sets again the squared l2 euclidean distances are computed to the ass
 \newpage
 \subsubsection{Subset of 8 manual generated morph sets}
 \label{sec:subsetman}
-Finally 8 sets of morphed biometric references were created and the distances to the comparing images was calculated. As a speciality in this set a morph of a woman and a man.
+Finally 8 sets of morphed biometric references were created and the distances to the comparing images were calculated. The morph of a man and a woman was notably in this set.
 The biometric references for the manual morphing are:
 \begin{multicols}{2}
 \begin{itemize}
@@ -135,18 +135,19 @@ The biometric references for the manual morphing are:
 \item 01-w-036-23 - 01-w-037-23
 \end{itemize}
 \end{multicols}
-For this subset the squared l2 euclidean distances to the associated compare images of the two biometric references is also computed. The resulting distances are shown in figure \ref{fig:result-jannis-all}. To decrease the amount of information the mean values for both biometric references were computed and are shown in figure \ref{fig:result-jannis-mean}.
+For this subset, the squared l2 euclidean distances to the associated comparison-images of the two biometric references are also computed. The resulting distances are shown in figure \ref{fig:result-jannis-all}. To decrease the amount of information, the mean values for both biometric references were computed and are shown in figure \ref{fig:result-jannis-mean}.
 
 \begin{figure}[htbp] 
 	\centering
 		\includegraphics[width=0.95\textwidth]{Resources/result-jannisODF.eps}
-	\caption{Squared l2 euclidean distances (y axis) comparing to the corresponding compare photos of the subset of 8 manual morphs (with 30 steps on the x axis)}
+	\caption{Squared l2 euclidean distances (y axis) compared
+	to the corresponding compare photos of the subset of 8 manual morphs (with 30 steps on the x axis)}
 	\label{fig:result-jannis-all}
 \end{figure}
 \begin{figure}[htbp] 
 	\centering
 		\includegraphics[width=0.95\textwidth]{Resources/result-jannis-meanODF.eps}
-	\caption{Mean squared l2 euclidean distances (y axis) comparing to the corresponding compare photos of the subset of 8 manual morphs (with 30 steps on the x axis)}
+	\caption{Mean squared l2 euclidean distances (y axis) compared to the corresponding compare photos of the subset of 8 manual morphs (with 30 steps on the x axis)}
 	\label{fig:result-jannis-mean}
 \end{figure}
 
@@ -157,8 +158,8 @@ As a result a threshold is computed to get a $10$\% biometric false acceptance o
 
 \subsubsection{Automatic morphing (Subset of 39 automatic generated morph sets)}\label{sec:automorph-thres}
 For the calculation of the threshold of the automatic generated morphs the subset of 39 of section \ref{sec:subset39} is used, it's bigger than the subset of 5 automatic generated morph sets from section \ref{sec:subset5} so the used mean values are more representative.
-Used for the calculation are the squared l2 euclidean distances of section \ref{sec:subset39}.
-The resulting threshold for this subset is \textbf{$0.76891524$}. In contrast to the distances it is shown in figure \ref{fig:Result39-90-10}.
+For the calculation, the squared l2 euclidean distances of section \ref{sec:subset39} are used.
+The resulting threshold for this subset is \textbf{$0.76891524$}. The contrast to the distances is shown in figure \ref{fig:Result39-90-10}.
 
 
 \begin{figure}[htbp] 
@@ -169,7 +170,7 @@ The resulting threshold for this subset is \textbf{$0.76891524$}. In contrast to
 \end{figure}
 
 \subsubsection{Manual morphing (Subset of 8 manual generated morph sets)}\label{sec:manmorph-thres}
-For the calculation of the threshold of the manual generated morphs the subset of 8 of section \ref{sec:subsetman} is used and the calculated distances from the same section.
+For the calculation of the threshold of the manually generated morphs, the subset of 8 from section \ref{sec:subsetman} is used and the calculated distances from the same section.
 The resulting threshold for this subset is \textbf{$0.7172467154$}. In contrast to the distances it is shown in figure \ref{fig:Resultman-90-10}.
 
 
@@ -181,8 +182,8 @@ The resulting threshold for this subset is \textbf{$0.7172467154$}. In contrast 
 \end{figure}
 
 \subsubsection{Comparison threshold of manual and automatic}\label{sec:comp-thres}
-The two tresholds of the automatic morphing from \autoref{sec:automorph-thres} $0.76891524$ and the manual morphing in \autoref{sec:manmorph-thres} $0.7172467154$ are close to another. They differ only about $0.05$, which is not much. The threshold of the manual morphing is lower than the automatic threshold, this could mean that the images of the manual morphing are better, but such a low difference could also be possible through lower the distances because of the input biometric reference variations.
+The two tresholds of the automatic morphing from \autoref{sec:automorph-thres} $0.76891524$ and the manual morphing in \autoref{sec:manmorph-thres} $0.7172467154$ are close to another. They differ only about $0.05$, which is not much. The threshold of the manual morphing is lower than the automatic threshold, this could mean that the images of the manual morphing are better, but such a small difference could also be possible lower the distances because of the input biometric reference variations.
 
-As a result the threshold of OpenFace should be set to $0.71$ to fight off morphing attacks, in fact the biometric false rejection rate in the biometric system is acceptable.
+As a result, the threshold of OpenFace should be set to $0.71$ to fight off morphing attacks. In fact, the biometric false rejection rate in the biometric system is acceptable.
 
 Compared to \cite{ferrara2014magic} which is based on \cite{baltruvsaitis2016openface} (threshold of 0.999) we were able to show that a 90-10 threshold is already achieved at a much lower distance.
