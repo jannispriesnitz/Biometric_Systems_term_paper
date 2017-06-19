@@ -4,8 +4,8 @@
 Resulting from the work are the squared l2 euclidean distances calculated with the program OpenFace. The distance shows the similiarity to the given biometric references, it is a dissimilarity score. A lower distance means the compared two biometric references are more equal, when the distance is under a given threshold, these two biometric references are accepted to be the same biometric reference and so access is given. The resulting morphed photos were compared to diffrent photos of both biometric references, to get a independend distance. Which percentage of each biometric reference and the picture number is shown in \ref{percentageMorph}.
 \subsection{Distances}
 
-\subsubsection{Subset of 5 automatic generated morph sets (from biometric references also used by Budrhani)}\label{sec:subset5}
-\todo{Vllt. sollten wir die Überschrift ändern - Wer ist Budrhani?}
+\subsubsection{Subset of 5 automatic generated morph sets}\label{sec:subset5}
+
 All resultingsquared l2 euclidean distances for the morphed photos of biometric references 01-m-002-27 to 01-m-003-24, 01-m-003-24 to 01-m-005-23, 01-m-004-23 to 01-m-005-23, 01-m-010-23 to 01-m-013-23 and 01-m-014-23 to 01-m-016-23 compared to the corresponding compare images are way too much data. So there is as an example of the morphed image 01-m-002-27 - 01-m-003-24:
 
 \begin{tabular}{lrrrrrr}
@@ -156,7 +156,7 @@ For this subset the squared l2 euclidean distances to the associated compare ima
 As a result a threshold is computed to get a $10$\% biometric false acceptance of an impostor (false match rate (FMR)) and a $90$\% chance to non-match a morphed image.
 
 \subsubsection{Automatic morphing (Subset of 39 automatic generated morph sets)}\label{sec:automorph-thres}
-For the calculation of the threshold of the automatic generated morphs the subset of 39 of section \ref{sec:subset39} is used, it's bigger than the subset of 5 automatic generated morph sets (from biometric references also used by Budrhani) of section \ref{sec:subset5} so the used mean values are more representative.
+For the calculation of the threshold of the automatic generated morphs the subset of 39 of section \ref{sec:subset39} is used, it's bigger than the subset of 5 automatic generated morph sets from section \ref{sec:subset5} so the used mean values are more representative.
 Used for the calculation are the squared l2 euclidean distances of section \ref{sec:subset39}.
 The resulting threshold for this subset is \textbf{$0.76891524$}. In contrast to the distances it is shown in figure \ref{fig:Result39-90-10}.
 
@@ -185,4 +185,4 @@ The two tresholds of the automatic morphing from \autoref{sec:automorph-thres} $
 
 As a result the threshold of OpenFace should be set to $0.71$ to fight off morphing attacks, in fact the biometric false rejection rate in the biometric system is acceptable.
 
-\todo[inline]{Compare to threshold of other papers: Suggestion: Compared to \cite{ferrara2014magic} which is based on \cite{baltruvsaitis2016openface} (threshold of 0.999) we were able to show that a 90-10 threshold is already achieved at a much lower distance. }
+Compared to \cite{ferrara2014magic} which is based on \cite{baltruvsaitis2016openface} (threshold of 0.999) we were able to show that a 90-10 threshold is already achieved at a much lower distance.
